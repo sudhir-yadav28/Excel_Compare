@@ -231,10 +231,10 @@ def main():
                 else:
                     st.subheader(f"🔎 Mismatch Preview (up to 100 rows)")
                     st.dataframe(
-                        diff_df.style.applymap(
+                        diff_df.style.map(
                             lambda _: "background-color: #FFEB9C",
                             subset=["Incorrect Value"]
-                        ).applymap(
+                        ).map(
                             lambda _: "background-color: #C6EFCE",
                             subset=["Correct Value"]
                         ),
